@@ -1,5 +1,5 @@
 function Filtered-Process-List($letter, $from_pid, $to_pid) {
-     get-process | where-object {
+     get-process | where {
         ($_.id -gt $from_pid) -and
         ($_.id -lt $to_pid) -and
         ($_.ProcessName -Match "^$letter.*")
