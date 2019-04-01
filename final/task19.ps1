@@ -1,9 +1,9 @@
-# Input process name and finish time: pr1 19-12-98-11:00
-# Input process name and finish time: pr2 10-12-98-11:00
-# Input process name and finish time: pr3 19-12-19-19:00
-# Input process name and finish time: pr4 19-12-20-11:00
-# Input process name and finish time: end
-# 
+# pr1 19-12-98-11:00
+# pr2 10-12-98-11:00
+# pr3 19-12-19-19:00
+# pr4 19-12-20-11:00
+# end
+
 # pr3 pr4
 
 function getProcessInfo {
@@ -37,7 +37,8 @@ function processManagement {
     $processes = getProcessInfo
 
     $updatedProcesses = removeOldProcess($processes)
-
+    Write-Host
+    Write-Host "Processes running:"
     Write-Host $updatedProcesses.Keys
 
 }
